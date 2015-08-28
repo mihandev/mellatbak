@@ -57,7 +57,7 @@ class mellatbank {
      * Create a new object
      * @param array $params
      */
-    public function __cunstruct($params, $fault = true) {
+    public function __construct($params, $fault = true) {
         $this->_terminal = isset($params['terminal']) ? $params['terminal'] : null;
         $this->_username = isset($params['username']) ? $params['username'] : null;
         $this->_password = isset($params['password']) ? $params['password'] : null;
