@@ -1,0 +1,23 @@
+ 
+{
+    "name": "mihandev/mellatbank",
+    "description": "mellatbank re-packaged for Packagist/Composer",
+    "homepage": "http://www.mihandev.net/",
+    "require": {
+        "fergusean/nusoap": "*"
+    },
+    "authors": [
+        {
+            "name": "Ahmad Rezaee",
+            "homepage": "https://mihandev.net"
+        }
+    ],
+    "autoload": {
+    	"classmap": ["mellatbank.php"]
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1"
+        }
+    }
+}
