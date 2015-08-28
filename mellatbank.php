@@ -304,7 +304,7 @@ class mellatbank {
             case 43 : $err = "درخواست verify قبلا صادر شده است"; break;
         }
         
-        return isset($err)? $err : null ;
+        return isset($err)? $err : $resNumber ;
     }
 
 }
