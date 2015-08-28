@@ -121,6 +121,7 @@ class mellatbank {
                         return $this->postRefId($res[1]);
                     } 
                     else {
+                        // get error by response code
                         return $this->error((int)$ResCode);
                     }
                 }
@@ -299,6 +300,7 @@ class mellatbank {
             case 41 : $err = "شماره درخواست تکراری است!"; break;
             case 421 : $err = "ای پی نامعتبر است!"; break;
             case 412 : $err = "شناسه قبض نادرست است!"; break;
+            case 418: $err = "اشكال در تعريف اطلاعات مشتري"; break;
             case 45 : $err = "تراکنش از قبل ستل شده است"; break;
             case 46 : $err = "تراکنش ستل شده است"; break;
             case 35 : $err = "تاریخ نامعتبر است"; break;
