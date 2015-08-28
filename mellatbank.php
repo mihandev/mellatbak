@@ -92,13 +92,15 @@ class mellatbank {
                 'userName' => $this->_username,
                 'userPassword' => $this->_password,
                 'orderId' => $this->_orderid,
-                'amount' => $amount,
+                'amount' => $this->_amount,
                 'localDate' => date('ymj'),
                 'localTime' => date('His'),
                 'additionalData' => '',
                 'callBackUrl' => $this->_callBackUrl,
                 'payerId' => 0
             );
+
+            // call to the webservice
             $results = $this->_client->call('bpPayRequest', $parameters, 'http://interfaces.core.sw.bps.com/');
             if ($this->_client->fault && $this->_fault) {
                 echo '<h2>Fault</h2><pre>';
