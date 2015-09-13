@@ -232,8 +232,8 @@ class mellatbank {
      * @throws Exception
      */
     public function check($params) {
-        if(isset($params["ResCode"]) && $params["ResCode"] == 0) {
-            if($this->verify($params) && $this->settle($params))
+        if(isset($params["ResCode"])) {
+            if($params["ResCode"] == 0 && $this->verify($params) && $this->settle($params))
             {
                 // success payment
                 return array(
